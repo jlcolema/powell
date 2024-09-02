@@ -1,0 +1,293 @@
+
+/*-------------------------------------------
+	Pre-Header
+-------------------------------------------*/
+
+
+#pre-header {
+
+	color: $gray;
+	background: rgb(231, 231, 232);
+
+	.fixed & {
+
+		@media screen and (min-width: 690px) {
+
+			margin: 0 0 139px 0;
+
+		}
+
+	}
+
+	.wrap {
+
+		position: relative;
+		padding: 0;
+		@include group;
+
+		@media screen and (min-width: 690px) {
+
+			padding: 0 20px;
+
+		}
+
+		&.open {
+
+			padding: 123px 0 0 0;
+
+			@media screen and (min-width: 465px) {
+
+				padding: 0;
+
+			}
+
+		}
+
+	}
+
+		.inner-wrap {
+
+			float: right;
+
+		}
+
+			.nav {
+
+				float: left;
+
+				.toggle {
+
+					border-right: 1px solid rgb(180, 180, 180);
+					@include font-size(14);
+					line-height: (18/14) + em;
+					@include proxima-nova-semibold;
+					text-transform: uppercase;
+					cursor: pointer;
+
+					@media screen and (min-width: 465px) {
+
+						display: none;
+
+					}
+
+					span {
+
+						display: block;
+						height: 40px;
+						padding: 12px 12px 0 20px;
+						background: url(../img/pre-header-nav-toggle.svg) left 9px no-repeat;
+						background-size: 20px 20px;
+
+					}
+
+				}
+
+				ul {
+
+					display: none;
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					@include group;
+
+					@media screen and (min-width: 465px) {
+
+						display: block;
+
+					}
+
+					&.open {
+
+						position: absolute;
+						right: 0;
+						top: 0;
+						display: block;
+						width: 100%;
+						z-index: 1;
+
+						@media screen and (min-width: 465px) {
+
+							position: static;
+							width: auto;
+
+						}
+
+					}
+
+				}
+
+					li {
+
+						float: left;
+						width: 100%;
+						@include font-size(12);
+						line-height: (16/12) + em;
+						@include proxima-nova-regular;
+						text-transform: uppercase;
+						text-align: center;
+						border-bottom: 1px solid rgb(180, 180, 180);
+
+						@media screen and (min-width: 465px) {
+
+							width: auto;
+							border-bottom: none;
+							border-right: 1px solid rgb(180, 180, 180);
+
+						}
+
+					}
+
+						a {
+
+							display: block;
+							height: 40px;
+							padding: 13px 15px 0 15px;
+							color: $gray;
+							text-decoration: none;
+
+							&:hover {}
+
+						}
+
+					// Current section
+
+					.current-menu-item {
+
+						a {
+
+							&:hover {}
+
+						}
+
+					}
+
+			}
+
+			.search-form {
+
+				float: left;
+
+				// While search field is open
+
+				&.open {
+
+					label {
+
+						background-color: $white;
+
+					}
+
+					div {
+
+						display: block;
+
+					}
+
+				}
+
+				label {
+
+					display: inline-block;
+					width: 40px;
+					height: 40px;
+					background: url(../img/search.svg) 4px center no-repeat;
+					background-size: 30px 30px;
+					border-right: 1px solid rgb(180, 180, 180);
+					@include hide-text;
+
+				}
+
+				div {
+
+					display: none;
+					position: absolute;
+					left: 20px;
+					right: 20px;
+					bottom: -40px;
+					height: 40px;
+					background: $white;
+					border: 1px solid rgb(180, 180, 181);
+					border-top: none;
+					@include box-shadow(0 3px 2px rgba($black, 0.15));
+					z-index: 5;
+
+				}
+
+					.search-field {
+
+						height: 39px;
+						@include font-size(14);
+						line-height: (22/14) + em;
+						border: none;
+						outline: none;
+
+						&::-webkit-input-placeholder {
+
+							color: rgba($light-gray, 0.60);
+							@include proxima-nova-light-italic;
+
+						}
+
+						&:-moz-placeholder {
+
+							color: green;
+
+						}
+
+						&::-moz-placeholder {
+
+
+
+						}
+
+						&:-ms-input-placeholder {
+
+
+
+						}
+
+					}
+
+					.search-submit {
+
+						// Temporarily hidden.
+
+						display: none;
+
+						position: absolute;
+						right: 0;
+						top: 0;
+						width: 35px;
+						height: 35px;
+						background: pink;
+						z-index: 5;
+
+					}
+
+			}
+
+			.connect {
+
+				float: left;
+
+				div {
+
+					@include hide-text;
+
+				}
+
+					a {
+
+						display: block;
+						width: 40px;
+						height: 40px;
+						background: url(../img/twitter.svg) center center no-repeat;
+						background-size: 30px 30px;
+
+						&:hover {}
+
+					}
+
+			}
+
+}

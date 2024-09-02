@@ -1,0 +1,540 @@
+
+/*-------------------------------------------
+	CTA
+-------------------------------------------*/
+
+
+.cta {
+
+	margin: 30px 0;
+
+	.wrap {
+
+		max-width: 1040px;
+		@include group;
+
+		> div {}
+
+	}
+
+			a {
+
+				&:hover {}
+
+			}
+
+				img {
+
+					@include box-shadow(0 0 12px rgba($black, 0.25));
+
+				}
+
+		.bombay-heritage {}
+
+		.rug-collection {}
+
+		.powell-home-fashions {
+
+			float: left;
+			width: 32.8%;
+			padding: 0 15px 0 0;
+
+		}
+
+		.retail-store-locator {
+
+			float: right;
+			width: 67.2%;
+			padding: 0 0 0 15px;
+
+		}
+
+}
+
+/* Catalogs */
+
+.catalogs-overview {
+
+	// margin: 90px 0 70px 0;
+	// padding: 0 0 30px 0;
+	// background: rgb(228, 228, 228);
+	// border-top: 1px solid rgb(210, 210, 210);
+	// border-bottom: 1px solid rgb(210, 210, 210);
+
+	@media screen and (min-width: 640px) {
+
+		// padding: 0;
+
+	}
+
+	@media screen and (min-width: 700px) {
+
+		// margin-bottom: 80px;
+
+	}
+
+	.wrap {}
+
+		.inner-wrap {
+
+			// position: relative;
+			// width: 100%;
+			// max-width: 800px;
+			// margin: 0 auto;
+			// padding: 245px 0 0 0;
+
+			@media screen and (min-width: 640px) {
+
+				// padding: 30px 220px 30px 220px;
+
+			}
+
+		}
+
+			.covers {}
+
+				.cover {
+
+					// position: absolute;
+					// top: -20px;
+					// left: 50%;
+					// width: 180px;
+					// height: 230px;
+					// margin-left: -90px;
+					// @include box-shadow(0 15px 5px rgba($black, 0.65));
+					// z-index: 5;
+
+					@media screen and (min-width: 640px) {
+
+						// top: 50%;
+						// left: auto;
+						// margin: -115px 0 0 0;
+
+					}
+
+					&:first-of-type {
+
+						// -webkit-transform: rotate(-6deg);
+						// -moz-transform: rotate(-6deg);
+						// transform: rotate(-6deg);
+
+						@media screen and (min-width: 640px) {
+
+							// left: 0;
+
+						}
+
+					}
+
+					&:last-of-type {
+
+						// top: -15px;
+						// margin-left: -80px;
+
+						// -webkit-transform: rotate(5deg);
+						// -moz-transform: rotate(5deg);
+						// transform: rotate(5deg);
+
+						// z-index: 1;
+
+						@media screen and (min-width: 640px) {
+
+							// top: 50%;
+							// right: 0;
+							// margin: -115px 0 0 0;
+
+						}
+
+					}
+
+				}
+
+					img {}
+
+				.title {
+
+					// margin: 0 0 10px 0;
+					// text-transform: uppercase;
+					// text-align: center;
+					// color: $red;
+
+				}
+
+				.description {
+
+
+					// text-align: center;
+					// color: $gray;
+
+				}
+
+				.more {
+
+					// text-transform: uppercase;
+					// @include font-size(12);
+					// line-height: (16/12) + em;
+					// @include proxima-nova-semibold-italic;
+					// text-align: center;
+
+					a {
+
+						// display: inline-block;
+						// padding: 5px 10px 3px 10px;
+						// color: $white;
+						// background: $red;
+						// text-decoration: none;
+
+						&:hover {}
+
+					}
+
+				}
+
+}
+
+/* Store Locator */
+
+.store-locator {
+
+	// margin: 90px 0 50px 0;
+	// padding: 30px 0;
+	// border-top: 1px solid rgb(210, 210, 210);
+
+	@media screen and (min-width: 640px) {
+
+		// margin-top: 100px;
+
+	}
+
+	@media screen and (min-width: 700px) {
+
+		// margin-top: 120px;
+
+	}
+
+	.wrap {}
+
+		.inner-wrap {
+
+			// width: 100%;
+			// max-width: 700px;
+			// margin: 0 auto;
+
+			@media screen and (min-width: 640px) {
+
+				// @include group;
+
+			}
+
+		}
+
+			.map {
+
+				// position: relative;
+				// top: -50px;
+				// margin: 0 0 -30px 0;
+
+				@media screen and (min-width: 640px) {
+
+					// float: left;
+					// width: 40%;
+					// padding: 0 20px 0 0;
+
+				}
+
+			}
+
+				img {
+
+					// margin: 0 auto;
+					// @include box-shadow(0 3px 5px rgba($black, 0.65));
+
+				}
+
+			.content {
+
+				@media screen and (min-width: 640px) {
+
+					// float: left;
+					// width: 60%;
+					// padding: 0 0 0 10px;
+
+				}
+
+			}
+
+				.title {
+
+					// margin: 0 0 10px 0;
+					// text-transform: uppercase;
+					// text-align: center;
+					// color: $red;
+
+					@media screen and (min-width: 640px) {
+
+						// text-align: left;
+
+					}
+
+				}
+
+				.description {
+
+					// text-align: center;
+					// color: $gray;
+
+					@media screen and (min-width: 640px) {
+
+						// text-align: left;
+
+					}
+
+				}
+
+				.more {
+
+					// text-transform: uppercase;
+					// @include font-size(12);
+					// line-height: (16/12) + em;
+					// @include proxima-nova-semibold-italic;
+					// text-align: center;
+
+					@media screen and (min-width: 640px) {
+
+						// text-align: left;
+
+					}
+
+					a {
+
+						// display: inline-block;
+						// padding: 5px 10px 3px 10px;
+						// color: $white;
+						// background: $red;
+						// text-decoration: none;
+
+						&:hover {}
+
+					}
+
+				}
+
+}
+
+/* Image and Description */
+
+.image-and-description {
+
+	// margin: 0 0 30px 0;
+	// padding: 30px 0;
+	// border-top: 1px solid rgb(210, 210, 210);
+
+	.wrap {}
+
+		.inner-wrap {
+
+			// width: 100%;
+			// max-width: 800px;
+			// margin: 0 auto;
+
+			@media screen and (min-width: 640px) {
+
+				// @include group;
+
+			}
+
+		}
+
+			.photo {
+
+				// position: relative;
+				// top: -50px;
+				// margin: 0 0 -30px 0;
+
+				@media screen and (min-width: 640px) {
+
+					// float: left;
+					// width: 60%;
+					// padding: 0 10px 0 0;
+
+				}
+
+			}
+
+				img {
+
+					// margin: 0 auto;
+
+				}
+
+			.content {
+
+				@media screen and (min-width: 640px) {
+
+					// float: left;
+					// width: 40%;
+					// padding: 0 0 0 20px;
+
+				}
+
+			}
+
+				.title {
+
+					// margin: 0 0 10px 0;
+					// text-transform: uppercase;
+					// text-align: center;
+					// color: $red;
+
+					@media screen and (min-width: 640px) {
+
+						// text-align: left;
+
+					}
+
+				}
+
+				.description {
+
+					// text-align: center;
+					// color: $gray;
+
+					@media screen and (min-width: 640px) {
+
+						// text-align: left;
+
+					}
+
+				}
+
+				.more {
+
+					// text-transform: uppercase;
+					// @include font-size(12);
+					// line-height: (16/12) + em;
+					// @include proxima-nova-semibold-italic;
+					// text-align: center;
+
+					@media screen and (min-width: 640px) {
+
+						// text-align: left;
+
+					}
+
+					a {
+
+						// display: inline-block;
+						// padding: 5px 10px 3px 10px;
+						// color: $white;
+						// background: $red;
+						// text-decoration: none;
+
+						&:hover {}
+
+					}
+
+				}
+
+}
+
+/* Image Only */
+
+.image-only {
+
+	// margin: 0 0 30px 0;
+
+	.wrap {
+
+		// max-width: 1000px;
+		// padding: 0;
+
+	}
+
+		.inner-wrap {}
+
+			.photo {
+
+				// margin: 0 0 20px 0;
+
+			}
+
+				a {
+
+					&:hover {}
+
+				}
+
+					img {
+
+						// margin: 0 auto;
+
+					}
+
+			.description {
+
+				// width: 100%;
+				// max-width: 720px;
+				// margin: 0 auto;
+				// text-align: center;
+				// color: $gray;
+
+				p {}
+
+			}
+
+}
+
+/* About Us */
+
+.about-us {
+
+	// margin: 0 0 30px 0;
+
+	.wrap {}
+
+		.inner-wrap {}
+
+			.title {
+
+				// margin: 0 0 10px 0;
+				// @include font-size(20);
+				// line-height: (26/20) + em;
+				// text-transform: uppercase;
+				// text-align: center;
+				// color: $red;
+
+			}
+
+			.description {
+
+				// width: 100%;
+				// max-width: 720px;
+				// margin: 0 auto;
+				// text-align: center;
+				// color: $gray;
+
+			}
+
+			.more {
+
+				// text-transform: uppercase;
+				// @include font-size(12);
+				// line-height: (16/12) + em;
+				// @include proxima-nova-semibold-italic;
+				// text-align: center;
+
+				a {
+
+					// display: inline-block;
+					// padding: 5px 10px 3px 10px;
+					// color: $white;
+					// background: $red;
+					// text-decoration: none;
+
+					&:hover {}
+
+				}
+
+			}
+
+}

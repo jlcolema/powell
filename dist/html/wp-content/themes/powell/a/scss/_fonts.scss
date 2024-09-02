@@ -1,0 +1,175 @@
+
+//-------------------------------------------
+//	Fonts
+//-------------------------------------------
+
+
+// Proxima Nova (https://typekit.com/fonts/proxima-nova)
+
+
+// Thin
+
+
+@mixin proxima-nova-thin {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	font-style: normal;
+
+}
+
+
+// Thin Italic
+
+
+@mixin proxima-nova-thin-italic {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	font-style: italic;
+
+}
+
+
+// Light
+
+
+@mixin proxima-nova-light {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+
+}
+
+
+// Light Italic
+
+
+@mixin proxima-nova-light-italic {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-style: italic;
+
+}
+
+
+// Regular
+
+
+@mixin proxima-nova-regular {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+
+}
+
+
+// Regular Italic
+
+
+@mixin proxima-nova-regular-italic {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-style: italic;
+
+}
+
+
+// Semibold
+
+
+@mixin proxima-nova-semibold {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+
+}
+
+
+// Semibold Italic
+
+
+@mixin proxima-nova-semibold-italic {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	font-style: italic;
+
+}
+
+
+// Bold
+
+
+@mixin proxima-nova-bold {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+
+}
+
+
+// Bold Italic
+
+
+@mixin proxima-nova-bold-italic {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+
+}
+
+
+// Extrabold
+
+
+@mixin proxima-nova-extrabold {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 800;
+	font-style: normal;
+
+}
+
+
+// Extrabold Italic
+
+
+@mixin proxima-nova-extrabold-italic {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 800;
+	font-style: italic;
+
+}
+
+
+// Black
+
+
+@mixin proxima-nova-black {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 900;
+	font-style: normal;
+
+}
+
+
+// Black Italic
+
+
+@mixin proxima-nova-black-italic {
+
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 900;
+	font-style: italic;
+
+}

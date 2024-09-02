@@ -1,0 +1,1302 @@
+
+/*-------------------------------------------
+	Main
+-------------------------------------------*/
+
+
+#main {}
+
+	h1 {
+
+		#about &,
+		#stores &,
+		#contact &,
+		#become-a-dealer &,
+		#dealers &,
+		#error &,
+		.search & {
+
+			@media screen and (min-width: 690px) {
+
+				text-align: left;
+
+			}
+
+		}
+
+	}
+
+	h2 {
+
+		#contact &,
+		#dealers & {
+
+			margin: 0;
+
+		}
+
+	}
+
+	/* Chooser */
+
+	.chooser {
+
+		margin: 25px 0 0 0;
+
+		@media screen and (min-width: 440px) {
+
+			margin: 25px 0 20px 0;
+
+		}
+
+		.label {
+
+			width: 100%;
+			margin: 0;
+			@include proxima-nova-semibold;
+			text-transform: uppercase;
+			text-align: center;
+			color: $gray;
+			background: rgb(228, 228, 228);
+			cursor: pointer;
+
+			span {
+
+				display: block;
+				padding: 10px 10px 8px 10px;
+
+			}
+
+		}
+
+		.options {
+
+			padding: 25px 0 10px 0;
+			border-bottom: 1px solid rgb(228, 228, 228);
+
+			@media screen and (min-width: 440px) {
+
+				padding: 35px 0 25px 0;
+
+			}
+
+		}
+
+			ul {
+
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				@media screen and (min-width: 440px) {
+
+					// Define flex container
+
+					display: -webkit-flex;
+					display: flex;
+
+					// Establish main axis
+
+					-webkit-flex-direction: row;
+					flex-direction: row;
+
+					// By defaut, flex items will all try to fit on one line
+
+					-webkit-flex-wrap: wrap;
+					flex-wrap: wrap;
+
+					// Define alignment along the main axis
+
+					-webkit-justify-content: space-between;
+					justify-content: space-between;
+
+					// Define how flex items are laid out along the cross axis
+
+					-webkit-align-items: flex-start;
+					align-items: flex-start;
+
+				}
+
+			}
+
+				li {
+
+					margin: 0 0 10px 0;
+					text-transform: uppercase;
+
+					@media screen and (min-width: 440px) {
+
+						display: block;
+						width: 48%;
+						width: calc(50% - 10px);
+
+					}
+
+					@media screen and (min-width: 640px) {
+
+						width: 32%;
+						width: calc(33.33333% - 13px);
+
+					}
+
+				}
+
+					a {
+
+						color: $gray;
+						text-decoration: none;
+
+						&:hover {
+
+							color: $red;
+
+						}
+
+					}
+
+	}
+
+	.overview {
+
+		width: 100%;
+		max-width: 720px;
+		margin: 0 auto 35px auto;
+		text-align: center;
+
+		#stores & {
+
+			text-align: left;
+
+		}
+
+	}
+
+	/* Categories */
+
+	.categories {
+
+		ul {
+
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			@media screen and (min-width: 440px) {
+
+				margin-bottom: -50px;
+				text-align: justify;
+				@include placeholder;
+
+			}
+
+		}
+
+			li {
+
+				margin: 0 0 20px 0;
+
+				@media screen and (min-width: 440px) {
+
+					display: inline-block;
+					width: 48%;
+					width: calc(50% - 10px);
+					text-align: left;
+					vertical-align: top;
+
+				}
+
+				@media screen and (min-width: 640px) {
+
+					width: 32%;
+					width: calc(33.33333% - 13px);
+
+				}
+
+			}
+
+			.gap {
+
+				margin: 0;
+
+			}
+
+				a {
+
+					position: relative;
+					display: block;
+
+					&:hover {
+
+						.overlay {
+
+							opacity: 1;
+
+						}
+
+					}
+
+				}
+
+					img {}
+
+					.overlay {
+
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 100%;
+						height: 100%;
+						background: rgba($red, 0.75);
+						opacity: 0;
+						@include transition(opacity 0.35s);
+
+					}
+
+						.inner-overlay {
+
+							display: table;
+							width: 100%;
+							height: 100%;
+
+						}
+
+							span {
+
+								display: table-cell;
+								padding: 20px;
+								@include font-size(20);
+								line-height: (24/20) + em;
+								@include proxima-nova-semibold;
+								text-transform: uppercase;
+								text-align: center;
+								vertical-align: middle;
+								color: $white;
+
+							}
+
+	}
+
+	/* Collection */
+
+	.collection {
+
+		ul {
+
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			@media screen and (min-width: 440px) {
+
+				margin-bottom: -50px;
+				text-align: justify;
+				@include placeholder;
+
+			}
+
+			@media screen and (min-width: 640px) {
+
+				margin-bottom: -25px;
+
+			}
+
+		}
+
+			li {
+
+				margin: 0 0 20px 0;
+
+				@media screen and (min-width: 440px) {
+
+					display: inline-block;
+					width: 48%;
+					width: calc(50% - 10px);
+					text-align: left;
+					vertical-align: top;
+
+				}
+
+				@media screen and (min-width: 640px) {
+
+					width: 32%;
+					width: calc(33.33333% - 13px);
+
+				}
+
+			}
+
+			.gap {
+
+				margin: 0;
+
+			}
+
+				a {
+
+					position: relative;
+					display: block;
+
+					&:hover {
+
+						.overlay {
+
+							opacity: 1;
+
+						}
+
+					}
+
+				}
+
+					img {}
+
+	}
+
+	/* Product */
+
+	#product {
+
+		.description {
+
+			width: 100%;
+			max-width: 720px;
+			margin: 0 auto 25px auto;
+			text-align: center;
+
+		}
+
+		.meta {
+
+			margin: 0 0 20px 0;
+			text-align: center;
+
+			.size {
+
+				display: inline-block;
+				margin: 0 20px 20px 0;
+
+				.label {
+
+					position: relative;
+					top: -1px;
+					display: inline-block;
+					margin: 0 7px 0 0;
+					@include font-size(12);
+					line-height: (16/12) + em;
+					color: $gray;
+
+					span {
+
+						padding: 3px 6px 2px 6px;
+						@include proxima-nova-semibold;
+						text-transform: uppercase;
+						border: 1px solid rgb(228, 228, 228);
+
+					}
+
+				}
+
+			}
+
+			.part-number {
+
+				display: inline-block;
+				margin: 0 0 20px 0;
+
+				.label {
+
+					position: relative;
+					top: -1px;
+					display: inline-block;
+					margin: 0 7px 0 0;
+					@include font-size(12);
+					line-height: (16/12) + em;
+					color: $gray;
+
+					span {
+
+						padding: 3px 6px 2px 6px;
+						@include proxima-nova-semibold;
+						text-transform: uppercase;
+						border: 1px solid rgb(228, 228, 228);
+
+					}
+
+				}
+
+			}
+
+		}
+
+		#samples {
+
+			width: 100%;
+			max-width: 800px;
+			margin: 0 auto 55px auto;
+
+			.flexslider {
+
+				position: relative;
+
+			}
+
+				.slides {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+					li {
+
+						position: relative;
+
+					}
+
+						img {}
+
+				}
+
+				.flex-direction-nav {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+					li {
+
+						position: absolute;
+						left: 50%;
+						bottom: -15px;
+						background: $red;
+						@include hide-text;
+						@include box-shadow(0 2px 3px rgba($black, 0.45));
+						z-index: 5;
+
+						&:first-of-type {
+
+							margin-left: -45px;
+
+						}
+
+						&:last-of-type {
+
+							margin-left: 5px;
+
+						}
+
+					}
+
+						a {
+
+							display: block;
+							width: 40px;
+							height: 30px;
+							background: url(../img/featured-nav.svg);
+							background-size: 80px 30px;
+
+							&:hover {}
+
+							&.flex-prev {}
+
+							&.flex-next {
+
+								background-position: -40px 0;
+
+							}
+
+							&.flex-disabled {
+
+								opacity: 0.35;
+
+							}
+
+						}
+
+				}
+
+		}
+
+	}
+
+	/* Related Products */
+
+	#related {
+
+		.header {
+
+			margin: 0 0 35px 0;
+			text-align: center;
+			color: $gray;
+
+			.title {
+
+				display: block;
+				margin: 0;
+
+			}
+
+		}
+
+		.products {
+
+			ul {
+
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				// Define flex container
+
+				display: -webkit-flex;
+				display: flex;
+
+				// Establish main axis
+
+				-webkit-flex-direction: row;
+				flex-direction: row;
+
+				// By defaut, flex items will all try to fit on one line
+
+				-webkit-flex-wrap: wrap;
+				flex-wrap: wrap;
+
+				// Define alignment along the main axis
+
+				-webkit-justify-content: space-between;
+				justify-content: space-between;
+
+				// Define how flex items are laid out along the cross axis
+
+				-webkit-align-items: flex-start;
+				align-items: flex-start;
+
+			}
+
+				li {
+
+					width: 32%;
+					width: calc(33.33333% - 13px);
+
+				}
+
+					a {
+
+						&:hover {}
+
+					}
+
+						img {}
+
+		}
+
+	}
+
+	/* Catalogs */
+
+	.catalogs {
+
+		width: 100%;
+		// max-width: 520px;
+		margin: 0 auto;
+
+		ul {
+
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+		}
+
+			li {
+
+				// width: 48%;
+				// width: calc(50% - 10px);
+
+				&:last-of-type {}
+
+			}
+
+				a {
+
+					position: relative;
+					text-decoration: none;
+
+					&:hover {
+
+						.overlay {
+
+							.more {
+
+								opacity: 1;
+
+							}
+
+						}
+
+					}
+
+				}
+
+					img {
+
+						// @include box-shadow(0 3px 5px rgba($black, 0.65));
+
+					}
+
+					.overlay {
+
+						padding: 20px 0 0 0;
+
+					}
+
+						.title {
+
+							margin: 0 0 10px 0;
+							text-align: center;
+
+						}
+
+						.more {
+
+							position: absolute;
+							right: 0;
+							top: 40px;
+							text-transform: uppercase;
+							@include proxima-nova-semibold-italic;
+							text-align: center;
+							opacity: 0;
+							@include transition(opacity 0.35s);
+
+							span {
+
+								display: inline-block;
+								padding: 2px 10px;
+								color: $white;
+								background: $red;
+								text-decoration: none;
+
+							}
+
+						}
+
+	}
+
+	/* Store Locator */
+
+	#locator {}
+
+		#wpsl-wrap {}
+
+			// Search
+
+			.wpsl-search {
+
+				margin: 0 0 30px 0;
+				padding: 10px;
+				background: rgb(228, 228, 228);
+
+			}
+
+				#wpsl-search-wrap {
+
+					position: relative;
+					padding: 0;
+
+					@media screen and (min-width: 480px) {
+
+						padding: 0 100px 0 0;
+
+					}
+
+				}
+
+					// Address input
+
+					.wpsl-input {
+
+						div {}
+
+							label {
+
+								display: none;
+
+							}
+
+						input {
+
+							height: 40px;
+							border-color: $light-gray;
+
+							@media screen and (min-width: 480px) {
+
+								padding-right: 108px;
+
+							}
+
+						}
+
+					}
+
+					// Radius select
+
+					.wpsl-select-wrap {
+
+						#wpsl-radius {
+
+							margin: 0 0 10px 0;
+
+							@media screen and (min-width: 480px) {
+
+								margin: 0;
+
+							}
+
+							label {
+
+								display: none;
+
+							}
+
+							.wpsl-dropdown {
+
+								position: absolute;
+								right: 0;
+								top: 0;
+								z-index: 5;
+
+								@media screen and (min-width: 480px) {
+
+									right: 100px;
+
+								}
+
+								.old {
+
+									display: none;
+
+								}
+
+								.selected {
+
+									position: relative;
+									display: block;
+									width: 100px;
+									height: 40px;
+									padding: 8px 0 0 10px;
+									@include proxima-nova-semibold;
+									color: $white;
+									background: $light-gray;
+									background-size: 16px 16px;
+									border: 1px solid $gray;
+									cursor: pointer;
+
+									&:after {
+
+										content: "";
+										position: absolute;
+										right: 10px;
+										top: 50%;
+										width: 16px;
+										height: 16px;
+										margin-top: -8px;
+										background: url(../img/radius-toggle.svg);
+
+									}
+
+								}
+
+								.carat {}
+
+								div {
+
+									position: relative;
+									height: 0;
+									overflow: hidden;
+									@include box-shadow(0 3px 2px rgba($black, 0.15));
+									z-index: 10;
+
+								}
+
+									ul {
+
+										margin: -1px 0 0 0;
+										padding: 0;
+										list-style: none;
+										background: $white;
+										border: 1px solid $gray;
+										border-top: none;
+
+									}
+
+										li {
+
+											height: 40px;
+											padding: 8px 10px 0 10px;
+											color: $gray;
+
+											&:hover {
+
+												background: rgb(228, 228, 228);
+
+											}
+
+										}
+
+										.active {
+
+											@include proxima-nova-semibold;
+
+										}
+
+							}
+
+							select.wpsl-dropdown {
+
+								width: 90px;
+								height: 40px;
+								border: 1px solid $gray;
+								color: $white;
+								background: $light-gray url(../img/radius-toggle.svg) 64px center no-repeat;
+								background-size: 16px 16px;
+								@include proxima-nova-semibold;
+								border: 1px solid $gray;
+
+								@include border-radius(0);
+
+								-webkit-appearance: none !important;
+
+							}
+
+						}
+
+						div:last-of-type {}
+
+							input {
+
+								display: block;
+								width: 100%;
+								// width: 90px;
+								height: 40px;
+								padding: 2px 0 0 0;
+								@include font-size(16);
+								line-height: (24/16) + em;
+								@include proxima-nova-semibold;
+								text-transform: uppercase;
+								color: $white;
+								background: $red;
+
+								@media screen and (min-width: 480px) {
+
+									position: absolute;
+									right: 0;
+									top: 0;
+									width: 90px;
+									z-index: 5;
+
+								}
+
+							}
+
+					}
+
+			// Map
+
+			#wpsl-gmap {
+
+				width: 100%;
+				height: 300px;
+
+				@media screen and (min-width: 640px) {
+
+					height: 400px;
+
+				}
+
+			}
+
+			#wpsl-gmap div,
+			#wpsl-gmap img {
+
+				max-width:none;
+				background:none;
+				@include box-shadow(none);
+
+			}
+
+				// Info Window
+
+				.gm-style-iw {
+
+					height: auto !important;
+
+					div {}
+
+						.wpsl-info-window {}
+
+							p {
+
+								margin: 0;
+
+								a {
+
+									text-decoration: none;
+
+									strong {
+
+										position: relative;
+										top: -3px;
+										text-transform: uppercase;
+
+									}
+
+									&:hover {}
+
+								}
+
+								span {
+
+									display: block;
+									color: $gray;
+
+								}
+
+							}
+
+							.wpsl-info-actions {
+
+								margin: 5px 0 0 0;
+
+								a {
+
+									display: inline-block;
+									padding: 3px 6px 2px 6px;
+									@include font-size(12);
+									line-height: (16/12) + em;
+									@include proxima-nova-regular;
+									text-transform: uppercase;
+									text-decoration: none;
+									color: $gray;
+									background: rgb(228, 228, 228);
+									@include transition(all 0.35s);
+									z-index: 1;
+
+									&:hover {
+
+										color: $white;
+										background: $red;
+
+									}
+
+								}
+
+							}
+
+				}
+
+			// Results
+
+			#wpsl-result-list {}
+
+				#wpsl-stores {
+
+					ul {
+
+						margin: 0;
+						padding: 0;
+						list-style: none;
+
+					}
+
+						li {
+
+							position: relative;
+							padding: 20px 0;
+							border-bottom: 1px dotted rgb(228, 228, 228);
+
+						}
+
+							div {
+
+								margin: 0 0 10px 0;
+
+							}
+
+								p {
+
+									margin: 0;
+
+								}
+
+									strong {
+
+										display: block;
+										margin: 0;
+										@include font-size(20);
+										line-height: (26/20) + em;
+										@include proxima-nova-semibold;
+
+										a {
+
+											text-decoration: none;
+
+											&:hover {}
+
+										}
+
+									}
+
+									.wpsl-street {
+
+										display: block;
+
+									}
+
+									.wpsl-country {
+
+										display: block;
+
+									}
+
+							.wpsl-directions {
+
+								position: absolute;
+								right: 0;
+								bottom: 20px;
+								display: inline-block;
+								padding: 3px 6px 2px 6px;
+								@include font-size(12);
+								line-height: (16/12) + em;
+								@include proxima-nova-regular;
+								text-transform: uppercase;
+								text-decoration: none;
+								color: $gray;
+								background: rgb(228, 228, 228);
+								@include transition(all 0.35s);
+								z-index: 1;
+
+								&:hover {
+
+									color: $white;
+									background: $red;
+
+								}
+
+							}
+
+				}
+
+	/* vCard */
+
+	.vcard {
+
+		margin: 0 0 24px 0;
+
+		.n {
+
+			display: none;
+
+		}
+
+		.adr {
+
+			margin: 0 0 10px 0;
+
+			.label {
+
+				@include proxima-nova-semibold;
+
+			}
+
+			.street-address {}
+
+			.locality {}
+
+			.region {}
+
+			.postal-code {}
+
+		}
+
+		.email {
+
+			margin: 0 0 10px 0;
+
+			.label {
+
+				// display: block;
+				@include proxima-nova-semibold;
+
+			}
+
+			a {
+
+				&:hover {}
+
+			}
+
+		}
+
+		.tel {
+
+			.label {
+
+				// display: block;
+				@include proxima-nova-semibold;
+
+			}
+
+			&.toll-free {
+
+				margin: 0 0 10px 0;
+
+			}
+
+			&.phone {
+
+				margin: 0 0 10px 0;
+
+			}
+
+			&.fax {}
+
+		}
+
+	}
+
+	/* Results */
+
+	.results {
+
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {}
+
+			h1 {
+
+				a {
+
+					&:hover {}
+
+				}
+
+			}
+
+	}
+
+	/* Product Nav */
+
+	.product-nav {
+
+		margin: 40px 0 10px 0;
+		@include group;
+
+		.next-product {
+
+			margin: 0 0 20px 0;
+			text-transform: uppercase;
+			@include font-size(12);
+			line-height: (16/12) + em;
+			@include proxima-nova-semibold-italic;
+			text-align: center;
+
+			@media screen and (min-width: 540px) {
+
+				float: right;
+				margin: 0;
+
+			}
+
+			a {
+
+				display: inline-block;
+				padding: 5px 10px 3px 10px;
+				color: $white;
+				background: $red;
+				text-decoration: none;
+
+				&:hover {}
+
+			}
+
+		}
+
+		.back-to {
+
+			text-transform: uppercase;
+			@include font-size(12);
+			line-height: (16/12) + em;
+			@include proxima-nova-semibold-italic;
+			text-align: center;
+
+			@media screen and (min-width: 540px) {
+
+				float: left;
+
+			}
+
+			a {
+
+				display: inline-block;
+				padding: 5px 10px 3px 10px;
+				color: $gray;
+				// background: $light-gray;
+				text-decoration: none;
+
+				&:hover {}
+
+			}
+
+				.arrow {}
+
+		}
+
+	}
+
+	.notice {
+
+		.wrap {
+
+			max-width: 1040px;
+
+		}
+
+			p {
+
+				@include proxima-nova-semibold;
+				text-transform: uppercase;
+				text-align: right;
+
+			}
+
+				a {
+
+					color: $gray;
+
+					&:hover {
+
+						color: $red;
+						text-decoration: none;
+
+					}
+
+					&:before {
+
+						content: "\00BB";
+						padding: 0 5px 0 0;
+						@include font-size(20);
+
+					}
+
+					&:after {
+
+						content: "\00AB";
+						padding: 0 0 0 5px;
+						@include font-size(20);
+
+					}
+
+				}
+
+	}

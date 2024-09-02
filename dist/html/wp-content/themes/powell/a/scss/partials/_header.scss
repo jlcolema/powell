@@ -1,0 +1,303 @@
+
+/*-------------------------------------------
+	Header
+-------------------------------------------*/
+
+
+#header {
+
+	padding: 25px 0 0 0;
+	background: rgb(94, 90, 89) url(../img/new/background-texture.png);
+
+	@media screen and (min-width: 940px) {
+
+		height: 149px;
+		padding: 30px 0 28px 0;
+		border-bottom: 1px solid rgb(228, 228, 228);
+
+	}
+
+	#home & {
+
+		@media screen and (min-width: 940px) {
+
+			border-bottom: none;
+
+		}
+
+	}
+
+	.fixed & {
+
+		@media screen and (min-width: 940px) {
+
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			z-index: 9999;
+
+		}
+
+	}
+
+	.wrap {
+
+		position: relative;
+		padding: 0;
+
+		@media screen and (min-width: 940px) {
+
+			// max-width: 1040px;
+			padding: 0 20px;
+
+		}
+
+	}
+
+}
+
+		#logo {
+
+			position: relative;
+			width: 250px;
+			margin: 0 auto;
+			@include hide-text;
+
+			@media screen and (min-width: 940px) {
+
+				position: absolute;
+				left: 15px;
+				top: 50%;
+				margin: -12px 0 0 0;
+				z-index: 9999;
+
+			}
+
+			a {
+
+				display: block;
+				height: 114px;
+				background: url(../img/new/logo.png);
+
+				@media screen and (min-width: 940px) {}
+
+				&:hover {}
+
+			}
+
+		}
+
+		#nav {
+
+			margin: 28px 0 0 0;
+
+			@media screen and (min-width: 940px) {
+
+				position: absolute;
+				right: 10px;
+				top: 2px;
+				z-index: 5;
+
+			}
+
+			@media screen and (min-width: 1020px) {
+
+				// right: 0;
+
+			}
+
+			.toggle {
+
+				// Temporarily hidden; may not need this.
+
+				display: none;
+
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				@include proxima-nova-semibold;
+				text-transform: uppercase;
+				color: $gray;
+				background: url(../img/nav-toggle.svg) 7px center no-repeat;
+				background-size: 20px 20px;
+				border: 1px solid $light-gray;
+				cursor: pointer;
+				z-index: 5;
+
+				span {
+
+					display: inline-block;
+					height: 38px;
+					padding: 8px 14px 0 30px;
+
+				}
+
+			}
+
+			ul {
+
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				border-bottom: 1px solid $white;
+				@include group;
+
+				#home & {
+
+					border: none;
+
+				}
+
+				@media screen and (min-width: 940px) {
+
+					border: none;
+
+				}
+
+			}
+
+				li {
+
+					float: left;
+					width: 50%;
+					@include proxima-nova-semibold;
+					text-transform: uppercase;
+					text-align: center;
+					border-top: 1px solid $white;
+
+					@media screen and (min-width: 940px) {
+
+						width: auto;
+						border: none;
+
+					}
+
+
+					&:nth-child(odd) {
+
+						border-right: 1px solid $white;
+
+						@media screen and (min-width: 940px) {
+
+							border: none;
+
+						}
+
+					}
+
+				}
+
+					a {
+
+						display: block;
+						height: 60px;
+						padding: 18px 0 0 0;
+						color: $white;
+						text-decoration: none;
+						@include transition(color 0.35s);
+
+						@media screen and (min-width: 940px) {
+
+							height: auto;
+							padding: 12px 12px 10px 12px;
+
+						}
+
+						@media screen and (min-width: 1020px) {
+
+							// padding: 12px 15px 10px 15px;
+
+						}
+
+						&:hover {
+
+							color: $red;
+
+						}
+
+					}
+
+				// Current section
+
+				.category & #menu-item-67,
+				.single-furniture & #menu-item-67,
+				.current-menu-item {
+
+					a {
+
+						color: $red;
+
+						&:hover {}
+
+					}
+
+				}
+
+				// Remove highlight from Furniture when a category is active in menu
+
+				#menu-item-67.inactive {
+
+					a {
+
+						color: $white;
+
+						&:hover {
+
+							color: $red;
+
+						}
+
+					}
+
+				}
+
+				// Bombay
+
+				#menu-item-259 {
+
+					@include hide-text;
+
+					@media screen and (min-width: 940px) {
+
+						position: relative;
+						top: -38px;
+						left: -5px;
+
+					}
+
+					a {
+
+						display: block;
+						background: url(../img/new/bombay-logotype.png) center 8px no-repeat;
+						background-size: 70px 40px;
+
+						@media screen and (min-width: 940px) {
+
+							width: 140px;
+							height: 90px;
+							background-size: 140px 80px;
+
+						}
+
+						&:hover {
+
+							background-image: url(../img/new/bombay-logotype-hover.png);
+
+						}
+
+					}
+
+					&.current-menu-item {
+
+						a {
+
+							background-image: url(../img/new/bombay-logotype-hover.png);
+
+						}
+
+					}
+
+				}
+
+		}

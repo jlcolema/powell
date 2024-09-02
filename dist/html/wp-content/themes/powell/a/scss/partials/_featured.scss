@@ -1,0 +1,195 @@
+
+/*-------------------------------------------
+	Featured
+-------------------------------------------*/
+
+
+#featured {
+
+	border-top: 2px solid $red;
+	border-bottom: 8px solid $red;
+	background: $black;
+
+	@media screen and (min-width: 640px) {
+
+		overflow: hidden;
+
+	}
+
+	.wrap {
+
+		max-width: 1000px;
+		padding: 0;
+
+	}
+
+		.flexslider {
+
+			position: relative;
+
+		}
+
+			.flex-viewport {
+
+				@media screen and (min-width: 1000px) {
+
+					overflow: visible !important;
+
+				}
+
+			}
+
+				.slides {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+					li {
+
+						position: relative;
+
+						@media screen and (min-width: 1000px) {
+
+							opacity: 0.45;
+
+						}
+
+					}
+
+					.flex-active-slide {
+
+						@media screen and (min-width: 1000px) {
+
+							opacity: 1;
+
+						}
+
+					}
+
+						img {}
+
+						.overlay {
+
+							position: absolute;
+							left: 20px;
+							right: 20px;
+							bottom: 30px;
+							// background: rgba($black, 0.65);
+							z-index: 5;
+
+						}
+
+							.headline {
+
+								@include font-size(32);
+								line-height: (36/32) + em;
+								@include proxima-nova-semibold;
+								text-shadow: 0 1px 3px rgba($black, 0.65);
+
+							}
+
+								span {
+
+									color: $white;
+
+								}
+
+				}
+
+				.flex-direction-nav {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+					li {
+
+						position: absolute;
+						bottom: 0;
+						margin: 0 0 -18px 0;
+						background: $red;
+						@include hide-text;
+						@include box-shadow(0 2px 3px rgba($black, 0.45));
+						z-index: 5;
+
+						@media screen and (min-width: 640px) {
+
+							top: 50%;
+							bottom: auto;
+							margin: -15px 0 0 0;
+
+						}
+
+						&:first-of-type {
+
+							left: 50%;
+							margin: 0 0 -18px -50px;
+
+							@media screen and (min-width: 640px) {
+
+								left: 20px;
+								margin: 0 0 -18px 0;
+
+							}
+
+							@media screen and (min-width: 1080px) {
+
+								left: -20px;
+
+							}
+
+						}
+
+						&:last-of-type {
+
+							left: 50%;
+							margin: 0 0 -18px 10px;
+
+							@media screen and (min-width: 640px) {
+
+								left: auto;
+								right: 20px;
+								margin: 0 0 -18px 0;
+
+							}
+
+							@media screen and (min-width: 1080px) {
+
+								right: -20px;
+
+							}
+
+						}
+
+					}
+
+						a {
+
+							display: block;
+							width: 40px;
+							height: 30px;
+							background: url(../img/featured-nav.svg);
+							background-size: 80px 30px;
+
+							&:hover {}
+
+							&.flex-prev {}
+
+							&.flex-next {
+
+								background-position: -40px 0;
+
+							}
+
+							&.flex-disabled {
+
+								opacity: 0.35;
+
+							}
+
+						}
+
+				}
+
+}

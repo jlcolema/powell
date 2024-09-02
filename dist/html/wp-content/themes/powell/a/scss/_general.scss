@@ -1,0 +1,412 @@
+
+/*-------------------------------------------
+	Baseline Styles
+-------------------------------------------*/
+
+
+html {
+
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+
+}
+
+body {
+
+	@include font-size(16);
+	line-height: (24/16) + em;
+	@include proxima-nova-light;
+	color: $light-gray;
+	background: $white;
+	-webkit-font-smoothing: antialiased;
+
+}
+
+
+/* Block Level */
+
+
+h1 {
+
+	margin-bottom: (18/24) + em;
+	@include font-size(24);
+	line-height: (32/24) + em;
+	@include proxima-nova-semibold;
+	text-transform: uppercase;
+	text-align: center;
+	color: $red;
+
+}
+
+h2 {
+
+	margin-bottom: (24/20) + em;
+	@include font-size(20);
+	line-height: (26/20) + em;
+	@include proxima-nova-semibold;
+	color: $gray;
+
+}
+
+h3 {
+
+	margin-bottom: (24/16) + em;
+	@include font-size(16);
+	line-height: (24/16) + em;
+	@include proxima-nova-semibold;
+	text-transform: uppercase;
+	color: $gray;
+
+}
+
+h4 {
+
+	// margin-bottom: (20/17) + em;
+	// @include font-size(17);
+	// line-height: (22/17) + em;
+	// @include freight-sans-book;
+
+}
+
+h5 {
+
+	// margin-bottom: (20/17) + em;
+	// @include font-size(16);
+	// line-height: (26/17) + em;
+	// @include freight-sans-book;
+
+}
+
+h6 {
+
+	// margin-bottom: (20/16) + em;
+	// @include font-size(16);
+	// line-height: (26/16) + em;
+	// @include freight-sans-book;
+
+}
+
+p {
+
+	margin-bottom: (24/16) + em;
+
+	&:last-of-type {}
+
+}
+
+ol {
+
+	margin-bottom: (24/16) + em;
+	padding: 0 0 0 20px;
+	list-style-type: decimal;
+
+	li {}
+
+}
+
+ul {
+
+	margin-bottom: (24/16) + em;
+	padding: 0 0 0 20px;
+	list-style-type: disc;
+
+	li {}
+
+}
+
+dl {
+
+	margin-bottom: (24/16) + em;
+
+}
+
+	dt {
+
+		@include proxima-nova-semibold;
+
+	}
+
+	dd {}
+
+table {}
+
+th {
+
+	// padding: 8px;
+	// @include font-size(11);
+	// line-height: (13/11) + em;
+	@include proxima-nova-semibold;
+	// color: $gray;
+
+}
+
+td {
+
+	// padding: 8px;
+	// @include font-size(12);
+	// line-height: (14/12) + em;
+
+}
+
+article {}
+
+caption {}
+
+figure {}
+
+figcaption {
+
+	// margin: 20px 0 0 0;
+	// @include font-size(16);
+	// line-height: (20/16) + em;
+	// @include ff-tisa-sans-italic;
+
+}
+
+blockquote {
+
+	p {
+
+		// @include font-size(19);
+		// line-height: (26/19) + em;
+
+	}
+
+}
+
+/* Inline */
+
+i,
+em {
+
+	@include proxima-nova-light-italic;
+
+}
+
+cite {
+
+	// @include font-size(15);
+	// line-height: (18/15) + em;
+
+	&:before {
+
+		// content: "— ";
+
+	}
+
+}
+
+b,
+strong {
+
+	@include proxima-nova-semibold;
+
+}
+
+a {
+
+	color: $red;
+	text-decoration: none;
+
+	&:link {}
+
+	&:hover,
+	&:focus {
+
+		text-decoration: underline;
+
+	}
+
+}
+
+img {
+
+	display: block;
+	@include box-sizing(content-box);
+
+}
+
+code {}
+
+sub, sup {
+
+	// line-height: 0;
+
+}
+
+ins {
+
+	// color: $black;
+	// background-color: #fcd700;
+	// text-decoration: none;
+
+}
+
+mark {
+
+	// color: $black;
+	// background-color: #fcd700;
+	// font-style: italic;
+	// font-weight: bold;
+
+}
+
+::-moz-selection {
+
+	// color: $black;
+	// background: rgb(246, 203, 32);
+	// text-shadow: none;
+
+}
+
+::selection {
+
+	// color: $gray;
+	// background: rgb(246, 203, 32);
+	// text-shadow: none;
+
+}
+
+
+// Mozilla doesn't style place holders by default
+
+
+input:-moz-placeholder {}
+
+textarea:-moz-placeholder {}
+
+
+/*-------------------------------------------
+	Forms
+-------------------------------------------*/
+
+
+form {}
+
+fieldset {}
+
+legend {
+
+	// display: block;
+	// margin: 0 0 10px 0;
+	// @include font-size(16);
+	// line-height: (20/16) + em;
+	// @include ff-tisa-sans-regular;
+	// text-transform: uppercase;
+
+}
+
+label {
+
+	// display: block;
+	// margin: 0 0 10px 0;
+	// @include font-size(16);
+	// line-height: (20/16) + em;
+	// @include ff-tisa-sans-regular;
+	// text-transform: uppercase;
+
+}
+
+input {
+
+	&[type="text"],
+	&[type="search"],
+	&[type="email"],
+	&[type="tel"],
+	&[type="password"],
+	&[type="url"] {
+
+		// Override general styles applied to iOS devices.
+
+		-webkit-appearance: none;
+
+		display: block;
+		width: 100%;
+		padding: 5px 9px;
+		@include font-size(16);
+		line-height: (24/16) + em;
+		@include proxima-nova-light;
+		color: rgb(140, 140, 140);
+		border: 1px solid $gray;
+		@include border-radius(0);
+
+	}
+
+	&[type="checkbox"] {
+
+		// position: relative;
+		// top: -3px;
+		// margin: 0 7px 0 0;
+
+	}
+
+	&[type="radio"] {
+
+		// position: relative;
+		// top: -4px;
+		// margin: 0 5px 0 0;
+
+	}
+
+	&[type="button"],
+	&[type="submit"] {
+
+		// Override general styles applied to iOS devices.
+
+		-webkit-appearance: none;
+
+		// display: block;
+		// padding: 11px 25px;
+		// @include font-size(16);
+		// line-height: (20/16) + em;
+		// @include ff-tisa-sans-regular;
+		// text-transform: uppercase;
+		// text-align: center;
+		// color: $white;
+		// background: rgb(66, 165, 205);
+		border: none;
+		@include border-radius(0);
+
+	}
+
+}
+
+textarea {
+
+	// Override general styles applied to iOS devices.
+
+	-webkit-appearance: none;
+
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	padding: 5px 9px;
+	@include font-size(16);
+	line-height: (24/16) + em;
+	@include proxima-nova-light;
+	color: rgb(140, 140, 140);
+	border: 1px solid $gray;
+	@include border-radius(0);
+
+}
+
+button {
+
+	// Override general styles applied to iOS devices.
+
+	-webkit-appearance: none;
+
+	// display: block;
+	// padding: 11px 25px;
+	// @include font-size(16);
+	// line-height: (20/16) + em;
+	// @include ff-tisa-sans-regular;
+	// text-transform: uppercase;
+	// text-align: center;
+	// color: $white;
+	// background: rgb(66, 165, 205);
+	border: none;
+	@include border-radius(0);
+
+}
